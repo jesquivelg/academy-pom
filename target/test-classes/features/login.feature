@@ -19,7 +19,7 @@
 @tag
 Feature: Login Feature
   As a user i should be able to log in so i can see my profile page
-
+@ignore
   @ValidLogin
   Scenario: As a user i should be able to log in with valid credentials
     Given User opens the browser
@@ -29,7 +29,7 @@ Feature: Login Feature
     And User enters valid password "askldkas"
     And User clicks Sign in
     Then User should be in profile page
-
+@ignore
 @InvalidCredentials
   Scenario: As a user i should not be able to log in with invalid credentials
     Given User opens the browser
@@ -39,7 +39,7 @@ Feature: Login Feature
     And User enters invalid password "12345"
     And User clicks Sign in
     Then User see authentication failed error
- 
+ @ignore
 @BlankCredentials
   Scenario: As a user i should not be able to log in without credentials
     Given User opens the browser
@@ -47,7 +47,7 @@ Feature: Login Feature
     And User click on Sign in
     When User clicks Sign in
     Then User see authentication failed error
-    
+    @ignore
 @InvalidEmail
   Scenario: As a user i should not be able to log in with blank email
     Given User opens the browser
@@ -56,7 +56,7 @@ Feature: Login Feature
     When User enters invalid password "askldkas"
     And User clicks Sign in
     Then User see email is needed error "An email address required."
-    
+    @ignore
 @InvalidPassword
   Scenario: As a user i should not be able to log in with blank password
     Given User opens the browser
